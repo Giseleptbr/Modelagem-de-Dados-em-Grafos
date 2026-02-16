@@ -1,0 +1,48 @@
+type User {
+  userId: 1
+  name: Ana
+  email: ana@email.com
+  watchedMovie: Movie @relationship(type: "WATCHED", direction: OUT, properties: "Watched")
+}
+
+type Movie {
+  movieId: 1
+  title: one
+  year: 2016
+  userWatched: User @relationship(type: "WATCHED", direction: IN, properties: "Watched")
+  inGenreGenre: Genre @relationship(type: "IN_GENRE", direction: OUT)
+  actorActedIn: Actor @relationship(type: "ACTED_IN", direction: IN, properties: "ActedIn")
+  directorDirected: Director @relationship(type: "DIRECTED", direction: IN)
+}
+
+type Series {
+  seriesId: 1
+  title: two
+  seasons: 2
+}
+
+type Genre {
+  genreId: 3
+  name: horror
+  movieInGenre: Movie @relationship(type: "IN_GENRE", direction: IN)
+}
+
+type Actor {
+  actorId: 1
+  name: Jon
+  actedInMovie: Movie @relationship(type: "ACTED_IN", direction: OUT, properties: "ActedIn")
+}
+
+type Director {
+  directorId: 1
+  name: Joe
+  directedMovie: Movie @relationship(type: "DIRECTED", direction: OUT)
+}
+
+interface Watched {
+  rating: 4
+}
+
+interface ActedIn {
+  : 
+}

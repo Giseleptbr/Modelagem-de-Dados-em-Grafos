@@ -1,0 +1,194 @@
+{
+  "style": {
+    "font-family": "Fira Code",
+    "background-color": "#2B2B2B",
+    "background-image": "",
+    "background-size": "100%",
+    "node-color": "#2B2B2B",
+    "border-width": 2,
+    "border-color": "#A6B7C8",
+    "radius": 90,
+    "node-padding": 5,
+    "node-margin": 2,
+    "outside-position": "auto",
+    "node-icon-image": "",
+    "node-background-image": "",
+    "icon-position": "inside",
+    "icon-size": 64,
+    "caption-position": "inside",
+    "caption-max-width": 200,
+    "caption-color": "#A6B7C8",
+    "caption-font-size": 18,
+    "caption-font-weight": "normal",
+    "label-position": "inside",
+    "label-display": "bare",
+    "label-color": "#A6B7C8",
+    "label-background-color": "#ffffff",
+    "label-border-color": "#000000",
+    "label-border-width": 4,
+    "label-font-size": 18,
+    "label-padding": 5,
+    "label-margin": 4,
+    "directionality": "directed",
+    "detail-position": "inline",
+    "detail-orientation": "parallel",
+    "arrow-width": 2,
+    "arrow-color": "#A6B7C8",
+    "margin-start": 0,
+    "margin-end": 0,
+    "margin-peer": 20,
+    "attachment-start": "normal",
+    "attachment-end": "normal",
+    "relationship-icon-image": "",
+    "type-color": "#A6B7C8",
+    "type-background-color": "#2B2B2B",
+    "type-border-color": "#000000",
+    "type-border-width": 0,
+    "type-font-size": 18,
+    "type-padding": 5,
+    "property-position": "inside",
+    "property-alignment": "colon",
+    "property-color": "#A6B7C8",
+    "property-font-size": 18,
+    "property-font-weight": "normal"
+  },
+  "nodes": [
+    {
+      "id": "n0",
+      "position": {
+        "x": -278.15361069821347,
+        "y": -129.93504571830135
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "User"
+      ],
+      "properties": {
+        "userId": "1",
+        "name": "Ana",
+        "email": "ana@email.com"
+      }
+    },
+    {
+      "id": "n1",
+      "position": {
+        "x": -156.04380241069703,
+        "y": 163.9016460177379
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Movie"
+      ],
+      "properties": {
+        "movieId": "1",
+        "title": "one",
+        "year": "2016"
+      }
+    },
+    {
+      "id": "n2",
+      "position": {
+        "x": -369.82220004133967,
+        "y": 133.00548285224127
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Series"
+      ],
+      "properties": {
+        "seriesId": "1",
+        "title": "two",
+        "seasons": "2"
+      }
+    },
+    {
+      "id": "n3",
+      "position": {
+        "x": 277.04672434194543,
+        "y": 53.526322171927795
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Genre"
+      ],
+      "properties": {
+        "genreId": "3",
+        "name": "horror"
+      }
+    },
+    {
+      "id": "n4",
+      "position": {
+        "x": 64.82684258828239,
+        "y": -65.15503881841566
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Actor"
+      ],
+      "properties": {
+        "actorId": "1",
+        "name": "Jon"
+      }
+    },
+    {
+      "id": "n6",
+      "position": {
+        "x": 142.04031311980106,
+        "y": 275.2419655735703
+      },
+      "caption": "",
+      "style": {},
+      "labels": [
+        "Director"
+      ],
+      "properties": {
+        "directorId": "1",
+        "name": "Joe"
+      }
+    }
+  ],
+  "relationships": [
+    {
+      "id": "n0",
+      "type": "WATCHED",
+      "style": {},
+      "properties": {
+        "rating": "4"
+      },
+      "fromId": "n0",
+      "toId": "n1"
+    },
+    {
+      "id": "n1",
+      "type": "ACTED_IN",
+      "style": {},
+      "properties": {
+        "": ""
+      },
+      "fromId": "n4",
+      "toId": "n1"
+    },
+    {
+      "id": "n2",
+      "type": "DIRECTED",
+      "style": {},
+      "properties": {},
+      "fromId": "n6",
+      "toId": "n1"
+    },
+    {
+      "id": "n3",
+      "type": "IN_GENRE",
+      "style": {},
+      "properties": {},
+      "fromId": "n1",
+      "toId": "n3"
+    }
+  ]
+}
